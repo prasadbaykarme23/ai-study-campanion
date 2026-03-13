@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": "55e5590f-8932-4dc4-9f38-a7568ba39bae",
+      "name": "Test User",
+      "email": "test@example.com",
+      "password": "$2a$10$AJWO8r51PHm656R.4B7VU.WAwZ5K1EMEGLR6HDYdif4nkTPrP82Tq",
+      "oauthProvider": "local",
+      "oauthId": null,
+      "avatar": null,
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T03:48:24.938Z",
+      "updatedAt": "2026-03-11T03:48:24.938Z"
+    },
+    {
+      "id": "eba4f1da-5f09-4068-8f17-7f1d652497c9",
+      "name": "prem Chorge",
+      "email": "premchorge067@gmail.com",
+      "password": null,
+      "oauthProvider": "google",
+      "oauthId": "TWr14oKzb0U3ihHH0bU9iLiAAFZ2",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIw5kzJDpH7Ec1Jv4P6QKrGmbH9xUGPtA_hqM7i3IMbKsupGA=s96-c",
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T03:50:13.320Z",
+      "updatedAt": "2026-03-11T03:50:13.320Z"
+    },
+    {
+      "id": "72f07674-b61d-4b6c-b2ad-72dd210eff6d",
+      "name": "prasad baykar",
+      "email": "prasad_230307@mmpolytechnic.com",
+      "password": null,
+      "oauthProvider": "github",
+      "oauthId": "201099873",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocItt8JkmwxCmuXPRcJ4vIrV1lRPApVTbF7rLiLc1ApghnuZdQ=s96-c",
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T03:50:33.406Z",
+      "updatedAt": "2026-03-11T04:25:17.306Z"
+    },
+    {
+      "id": "5ed02c6a-76ff-478f-bf04-2ac3afa1ef7a",
+      "name": "Trimbak Baykar",
+      "email": "trimbakbaykar983@gmail.com",
+      "password": null,
+      "oauthProvider": "google",
+      "oauthId": "lGRBXCkN7hbfYmiYWSVx4rPqO6M2",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJrFyZEaQPgBfHiSNaBPNZbIzwYxdYU9-pAY7lWnZcYmWQ5EXGw=s96-c",
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T03:50:52.588Z",
+      "updatedAt": "2026-03-11T03:50:52.588Z"
+    },
+    {
+      "id": "b62deb6f-3850-4397-a2d9-f23f93552e08",
+      "name": "Test",
+      "email": "e2e@test.com",
+      "password": "$2a$10$zmgXVugPy8kXbdY8/kTQnu3ritpY12olTNPse82x.NcXbD3KjlJuq",
+      "oauthProvider": "local",
+      "oauthId": null,
+      "avatar": null,
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T04:11:47.548Z",
+      "updatedAt": "2026-03-11T04:11:47.548Z"
+    },
+    {
+      "id": "70d6d5ee-ea98-4e57-be9d-f501a62e49cd",
+      "name": "Test",
+      "email": "e2etest@test.com",
+      "password": "$2a$10$5CJzkQAdxh7l0hntQUFf/ugT9Hv8zHCuOFV6brgibBy3j3ZVbnLfW",
+      "oauthProvider": "local",
+      "oauthId": null,
+      "avatar": null,
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T04:12:19.558Z",
+      "updatedAt": "2026-03-11T04:12:19.558Z"
+    },
+    {
+      "id": "id_1773211514948",
+      "name": "Social User",
+      "email": "socialset1773211514947@test.com",
+      "password": null,
+      "oauthProvider": "google",
+      "oauthId": "x",
+      "avatar": null,
+      "weakTopics": {},
+      "studyTopics": [],
+      "createdAt": "2026-03-11T06:45:14.948Z",
+      "updatedAt": "2026-03-11T06:45:14.949Z"
+    }
+  ]
+}

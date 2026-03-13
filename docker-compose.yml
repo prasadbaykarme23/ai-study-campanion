@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Backend API Service
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: ai-study-backend
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: production
+      JWT_SECRET: ${JWT_SECRET:-your_super_secret_jwt_key_change_this_in_production}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      CLIENT_URL: http://localhost:3000
+      PORT: 5000
+    volumes:
+      - ./server/uploads:/app/uploads
+      - ./server/.env:/app/.env
+    networks:
+      - ai-network
+    restart: unless-stopped
+
+  # Frontend Application Service
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: ai-study-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: http://localhost:5000/api
+      REACT_APP_ENV: production
+    depends_on:
+      - backend
+    networks:
+      - ai-network
+    restart: unless-stopped
+
+networks:
+  ai-network:
+    driver: bridge
