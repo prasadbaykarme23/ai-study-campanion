@@ -9,7 +9,8 @@
 const fs = require('fs');
 const path = require('path');
 const admin = require('firebase-admin');
-require('dotenv').config({ path: path.join(__dirname, 'server/.env') });
+const PROJECT_ROOT = path.resolve(__dirname, '..', '..');
+require('dotenv').config({ path: path.join(PROJECT_ROOT, 'server/.env') });
 
 // Color codes for terminal output
 const colors = {
@@ -93,7 +94,7 @@ class FirebaseSetup {
     console.log();
   }
 
-  async migrateLocalUsers(dataDir = 'server/data') {
+  async migrateLocalUsers(dataDir = path.join(PROJECT_ROOT, 'server', 'data')) {
     console.log(`${colors.cyan}👥 Migrating full user records from local-users.json...${colors.reset}\n`);
 
     const localUsersPath = path.join(dataDir, 'local-users.json');
@@ -132,7 +133,7 @@ class FirebaseSetup {
     }
   }
 
-  async seedDataFromJson(dataDir = 'server/data') {
+  async seedDataFromJson(dataDir = path.join(PROJECT_ROOT, 'server', 'data')) {
     console.log(`${colors.cyan}📥 Seeding data from ${dataDir}...${colors.reset}\n`);
 
     // Skip col_users.json here — migrateLocalUsers() handles full user records
@@ -307,19 +308,19 @@ async function main() {
 
     // Configuration
     const PROJECT_ID = 'prem-b6c68';
-    const DATA_DIR = 'server/data';
+    const DATA_DIR = path.join(PROJECT_ROOT, 'server', 'data');
 
     // Check for service account JSON files
     const commonPaths = [
-      'prem-b6c68-firebase-adminsdk-fbsvc-1ba8e9b454.json',
-      'server/serviceAccountKey.json',
-      'serviceAccountKey.json'
+      path.join(PROJECT_ROOT, 'prem-b6c68-firebase-adminsdk-fbsvc-1ba8e9b454.json'),
+      path.join(PROJECT_ROOT, 'server', 'serviceAccountKey.json'),
+      path.join(PROJECT_ROOT, 'serviceAccountKey.json')
     ];
 
     let serviceAccountPath = null;
-    for (const filePath of commonPaths) {
-      if (fs.existsSync(filePath)) {
-        serviceAccountPath = filePath;
+    for (const candidatePath of commonPaths) {
+      if (fs.existsSync(candidatePath)) {
+        serviceAccountPath = candidatePath;
         break;
       }
     }

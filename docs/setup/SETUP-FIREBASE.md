@@ -4,7 +4,7 @@
 
 1. **Firebase Project Created**: Your Firebase project ID is `prem-b6c68`
 2. **Service Account Key**: Download from Firebase Console → Project Settings → Service Accounts
-3. **Python 3.7+**: Installed on your system
+3. **Node.js 14+**: Installed on your system
 
 ## Quick Start
 
@@ -23,7 +23,7 @@
 cd d:\ai
 
 # Install dependencies
-pip install -r requirements-firebase.txt
+npm install
 ```
 
 ### Step 3: Configure Credentials (Choose One)
@@ -43,7 +43,7 @@ FIREBASE_SERVICE_ACCOUNT={"type":"service_account","project_id":"prem-b6c68",...
 ### Step 4: Run the Setup Script
 
 ```bash
-python setup-firebase-db.py
+node scripts/firebase/setup-firebase-db.js
 ```
 
 ## What the Script Does
@@ -70,7 +70,7 @@ python setup-firebase-db.py
 ## Output Files
 
 - `firestore.rules` - Security rules (review before deploying)
-- `setup-firebase-db.py` - The main setup script
+- `scripts/firebase/setup-firebase-db.js` - The main setup script
 
 ## Deploy to Firebase
 
